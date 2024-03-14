@@ -4,7 +4,8 @@ let circleSpeedMultiplier = 0.5;
 let lightBrightness = 0;
 
 function setup() {
-  createCanvas(800, 500);
+  let canvas = createCanvas(800, 500);
+  canvas.parent("p5-canvas-container");
   noStroke();
 
   for (let i = 0; i < 100; i++) {
