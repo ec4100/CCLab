@@ -1,13 +1,11 @@
 let circles = [];
 let backgroundColor = 0;
 let circleSpeedMultiplier = 0.5;
+let lightBrightness = 0;
 
 function setup() {
-  //createCanvas(800, 500);
+  createCanvas(800, 500);
   noStroke();
-  let cnv = createCanvas(800,500)
-  cnv.parent("p5-canvas-container")
-
 
   for (let i = 0; i < 100; i++) {
     circles.push({
@@ -22,8 +20,8 @@ function setup() {
 }
 
 function draw() {
-  // background color
-  background(backgroundColor);
+  // Adjust background brightness based on lightBrightness
+  background(lightBrightness);
 
   // Update and draw each circle
   for (let i = 0; i < circles.length; i++) {
@@ -45,7 +43,28 @@ function draw() {
   }
 }
 
-function mouseClicked() {
+function keyPressed() {
+  if (key === ' ') {
+    // Simulate turning on a light, increase brightness
+    lightBrightness = 200;
+    // Increase circle speed when background is bright
+    circleSpeedMultiplier = 2.5;
+  } else if (key === 's' || key === 'S') {
+    // Save the canvas as a PNG file when 's' key is pressed
+    saveCanvas('title', 'png');
+  }
+}
+
+function keyReleased() {
+  if (key === ' ') {
+    // Simulate turning off the light, decrease brightness
+    lightBrightness = 0;
+    // Reset circle speed
+    circleSpeedMultiplier = 0.5;
+  }
+}
+
+function mousePressed() {
   // Check if the mouse is inside any circle
   for (let i = 0; i < circles.length; i++) {
     let circle = circles[i];
@@ -53,24 +72,9 @@ function mouseClicked() {
     if (d < circle.diameter / 2) {
       // Change the color of the circle
       circle.fillColor = color(random(255), random(255), random(255), random(100, 200));
+      // Add vibrating effect by adjusting position
+      circle.x += random(-5, 5);
+      circle.y += random(-5, 5);
     }
-  }
-}
-
-function keyPressed() {
-  if (key === ' ') {
-    // Background color switches between black and white
-    if (backgroundColor === 0) {
-      backgroundColor = 255;
-      // Increase circle speed when background is white
-      circleSpeedMultiplier = 2.5;
-    } else {
-      backgroundColor = 0;
-      // Normal speed when background is black 
-      circleSpeedMultiplier = 0.5;
-    }
-  } else if (key === 's' || key === 'S') {
-    // Save the canvas as a PNG file when 's' key is pressed
-    saveCanvas('title ', 'png');
   }
 }
