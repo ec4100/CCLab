@@ -20,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-  // Adjust background brightness based on lightBrightness
+  // Adjust background brightness 
   background(lightBrightness);
 
   // Update and draw each circle
