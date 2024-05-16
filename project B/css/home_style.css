@@ -1,0 +1,107 @@
+.headline {
+    font-size: 4em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: lightpink;
+    text-align: center; /* Center align the title */
+}
+body {
+    background-color: white ; 
+    color: #333; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+#main-wrapper {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.headline {
+    font-size: 4em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: lightpink; 
+}
+
+.two-columns {
+    display: flex;
+}
+
+.left {
+    flex: 1;
+}
+
+.blue {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.green {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+.yellow {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.post-it h3 {
+    color: black; 
+}
+
+.post-it p {
+    line-height: 1.6;
+}
+
+.blue {
+    background-color: #ddedff; 
+}
+
+.green {
+    background-color: #e5ffe5;} 
+
+.yellow {
+    background-color: #fff8dc; 
+}
+
+
+#footer {
+    text-align: center;
+    font-size: 0.7em;
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+
+#p5-canvas-container{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.dropdown-icon {
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    right: 10px; /* 10px from the right edge */
+    transform: translateY(-50%); /* Shift upward by half of its own height to center */
+    width: 20px; /* Smaller width, adjust as needed */
+    height: 20px; /* Smaller height, adjust as needed */
+    transition: transform 0.3s ease;
+}
+
+.post-it.active .dropdown-icon {
+    transform: translateY(-50%) rotate(180deg); /* Keep it centered while rotating */
+}
+
+.post-it {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}

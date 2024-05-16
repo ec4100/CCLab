@@ -3,32 +3,45 @@
 
 <head>
     <title>Homesickness in College</title>
-    <link rel="stylesheet" type="text/css" href="css/home.style.css">
-    <script src="js/sketch.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/home_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/addons/p5.sound.min.js"></script>
 </head>
-
 <body>
     <div id="title-wrapper">
         <h1 class="headline red">Homesickness in University</h1>
     </div>
-    <div id="p5-canvas-container"></div>
+
+    <div id="p5-canvas-container"> 
+    </div>
 
     <div id="main-wrapper">
         <div class="two-columns">
             <div class="left">
-                <div class="post-it blue">
-                    <h3 class="post-it blue">Definition of Homesickness:</h3>
-                    <p>Homesickness is a complex emotional response typically characterized by a longing or yearning for one's home environment or familiar surroundings. It can manifest as a deep sense of sadness, nostalgia, or even distress when separated from the people, places, and routines that are associated with home. Homesickness often occurs when individuals are away from home for an extended period, such as during travel, relocation, or attending school or college in a different city or country. Symptoms may vary from person to person but commonly include feelings of isolation, difficulty adjusting to new surroundings, and a desire to return to familiar comforts. Homesickness can impact mental well-being and may require coping strategies or support from loved ones to navigate effectively.</p>
+                <div class="post-it blue" onclick="toggleDisplay('content1')">
+                    <h3>What is homesickness?</h3>
+                    <p id="content1" style="display:none;">Homesickness is a complex emotional response typically characterized by a longing or yearning for one's home environment or familiar surroundings. It can manifest as a deep sense of sadness, nostalgia, or even distress when separated from the people, places, and routines that are associated with home. Homesickness often occurs when individuals are away from home for an extended period, such as during travel, relocation, or attending school or college in a different city or country. Symptoms may vary from person to person but commonly include feelings of isolation, difficulty adjusting to new surroundings, and a desire to return to familiar comforts. Homesickness can impact mental well-being and may require coping strategies or support from loved ones to navigate effectively.</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="dropdown-icon">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+                    </svg>                 
                 </div>
 
-                <div class="post-it green">
-                    <h3 class="post-it green">Statistics</h3>
-                    <p>Homesickness is a prevalent issue among college students, with statistics indicating its widespread impact on mental health and academic performance. Studies suggest that approximately 50% to 70% of college students experience homesickness at some point during their academic journey. According to research published in the Journal of American College Health, around 35% of freshmen report feeling homesick within the first six weeks of starting college. Furthermore, homesickness can have significant implications for student retention rates, with some studies linking it to increased dropout rates among first-year students. Additionally, surveys have shown that homesickness correlates with higher levels of stress, anxiety, and depression among college students, highlighting the need for effective support systems and coping mechanisms to address this issue within educational institutions.</p>
-                </div>
 
-                <div class="post-it yellow">
-                    <h3 class="post-it yellow">Ways to Combat Homesickness</h3>
-                    <p>Combatting homesickness requires a multifaceted approach that addresses emotional, social, and practical aspects of adjustment. Firstly, establishing a sense of routine and familiarity in the new environment can be immensely helpful. This might involve creating a schedule for daily activities, such as attending classes, joining clubs or organizations, and exploring the campus or local area. Building connections with peers and forming new friendships can also alleviate feelings of loneliness and isolation. Actively participating in social events, study groups, or extracurricular activities can facilitate meaningful connections and provide a support network away from home. Additionally, maintaining regular communication with family and friends through phone calls, video chats, or social media can help bridge the distance and provide a sense of connection to home. Engaging in self-care practices such as exercise, meditation, or hobbies can also contribute to overall well-being and resilience in managing homesickness. Seeking support from campus resources, such as counseling services or support groups, can provide valuable guidance and assistance in coping with homesickness. Ultimately, acknowledging and validating one's feelings while actively pursuing strategies for adaptation and integration can empower individuals to navigate homesickness with greater resilience and ease.</p>
+                <div class="post-it green" onclick="toggleDisplay('content2')">
+                    <h3>Homesickness is so human!</h3>
+                    <p id="content2" style="display:none;">Homesickness, often regarded as a quintessential human emotion, found its place deeply embedded within the narrative of my own life. As I embarked on the journey to college, brimming with anticipation and excitement, I soon encountered the poignant ache of separation from home. It was a profound longing that seeped into every corner of my being, yearning for the familiar comforts I had always taken for granted—the warmth of familial bonds, the scent of home-cooked meals, and the shared laughter echoing through the halls. Each passing day seemed to magnify the distance between me and the sanctuary I once knew so well, yet amidst the ache, I began to discern a subtle resilience taking root within me. Through handwritten letters and late-night conversations, I found solace in the enduring connections that bridged the physical gap, reaffirming the profound human need for belonging and connection.</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="dropdown-icon">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+                    </svg>      
+                </div>
+                
+
+                <div class="post-it yellow" onclick="toggleDisplay('content3')">
+                    <h3>Why this message?</h3>
+                    <p id="content3" style="display:none;">I decided this webiste and my time capsule were the two things I wanted to send to the future. Why? Because human emotions, like homesickness, are what I think encapsulates the human experience. The song playing in the background is also a song I listen to when I am away from my family and miss them. These feelings of longing are what makes us human. So in the blog, my friends and I have left ways that we have personally found helpful! </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="dropdown-icon">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+                    </svg>      
                 </div>
             </div>
         </div>
@@ -36,14 +49,31 @@
 
         </div>
             <div id="blog-link">
-                <h3 class="blue">Visit the Blog</h3>
-                <p>Check out the latest <a href="blog.html">Tips and Tricks from Us to You</a> to find helpful tips and tricks. You're not alone!</p>
+                <h3 class="blue">Visit our Blog</h3>
+                <p>From my friends and I to You!  <a href="blog.html">Tips and Tricks from Us to You</a> to find helpful tips and tricks. You're not alone!</p>
             </div>
         </div>
     </div>
     <div id="footer" class="yellow">
         <p>A website created by Evelyn Chen in Spring 2024</p>
     </div>
+
+    <audio controls autoplay loop>
+        <source src="home_song.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/sketch.js"></script>
+    <script>
+        function toggleDisplay(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+        </script>
+        
 
 </body>
 
